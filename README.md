@@ -13,7 +13,7 @@
 |3 | Object Oriented Programming in Python                          |[03_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/03_starter)|||
 |4 | OOP Part 2: Class Methods & Class Variables                    |[04_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/04_starter)|||
 |5 | Object Inheritance in Python & Configuring Python Applications |[05_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/05_starter)|||
-|6 | Object Relationships                                           ||||
+|6 | Object Relationships                                           |[06_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/06_starter)|||
 |7 | SQL Fundamentals & Table Relations                             ||||
 |8 | Object-Relational Mapping                                      ||||
 |9 | Python CLI                                                     ||||
