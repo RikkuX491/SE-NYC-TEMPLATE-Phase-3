@@ -10,12 +10,13 @@
 - Python data types (`str`, `int`, `float`, `bool`, `None`)
 - Control Flow: Operators, Conditional Statements, Loops
 - Functions in Python
-- Using `raise Exception()` to raise an Exception
-- Handling errors with `try:` and `except:`
+- Using `raise Exception` to raise an Exception
+- Using `raise ValueError` to raise a ValueError
+- Handling errors with `try` and `except`
 
 ## Introduction
 
-Welcome to Python! In today's lecture, we will discuss the Python Fundamentals including important terminal commands, using `ipdb` for debugging, control flow, functions, and using `raise Exception()` to raise an Exception.
+Welcome to Python! In today's lecture, we will discuss the Python Fundamentals including important terminal commands, using `ipdb` for debugging, control flow, functions, using `raise Exception` to raise an Exception, and using `raise ValueError` to raise a ValueError.
 
 ## Setup
 
