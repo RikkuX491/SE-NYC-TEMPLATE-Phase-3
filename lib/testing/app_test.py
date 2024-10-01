@@ -9,6 +9,7 @@ from app import *
 
 class TestAppPy:
     '''app.py'''
+
     def test_prints_hello_world(self):
         '''prints "Hello Flatiron! Class is in session!"'''
         captured_out = io.StringIO()
@@ -24,13 +25,13 @@ class TestAppPy:
 
     def test_validates_add(self):
         '''the two input args for add() are both numbers (integers or floats).'''
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             add("hello", 2)
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             add(1, "flatiron")
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             add("hello", "flatiron")
 
     def test_subtract(self):
@@ -40,13 +41,13 @@ class TestAppPy:
 
     def test_validates_subtract(self):
         '''the two input args for subtract() are both numbers (integers or floats).'''
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             subtract("hello", 2)
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             subtract(1, "flatiron")
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             subtract("hello", "flatiron")
 
     def test_multiply(self):
@@ -56,13 +57,13 @@ class TestAppPy:
 
     def test_validates_multiply(self):
         '''the two input args for multiply() are both numbers (integers or floats).'''
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             multiply("hello", 2)
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             multiply(1, "flatiron")
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             multiply("hello", "flatiron")
 
     def test_divide(self):
@@ -72,16 +73,18 @@ class TestAppPy:
 
     def test_validates_divide(self):
         '''the two input args for divide() are both numbers (integers or floats). The second input cannot be equal to 0'''
-        with pytest.raises(Exception):
+        divide(7, 14)
+
+        with pytest.raises(ValueError):
             divide("hello", 2)
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             divide(1, "flatiron")
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             divide("hello", "flatiron")
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             divide(3, 0)
 
     def test_calculator(self):
@@ -93,7 +96,7 @@ class TestAppPy:
     
     def test_validates_calculator(self):
         '''operation is +, -, *, or /. raises Exception if any other value is passed into calculator as the input arg for operation.'''
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             calculator('$', 1, 2)
 
     def test_print_greeting_loop(self):
