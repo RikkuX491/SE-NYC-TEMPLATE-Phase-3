@@ -8,7 +8,7 @@
 
 |No. | Lecture                          | Starter 	| Example Code 	| Solution 	|
 |----|------------------------------	|:-----:	|--------	|---------	|
-|1 | Python Fundamentals                                            ||||
+|1 | Python Fundamentals                                            |[01_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/01_starter)|||
 |2 | Python Data Structures                                         ||||
 |3 | Object Oriented Programming in Python                          ||||
 |4 | OOP Part 2: Class Methods & Class Variables                    ||||
