@@ -15,5 +15,5 @@
 |5 | Object Inheritance in Python & Configuring Python Applications |[05_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/05_starter)|||
 |6 | Object Relationships                                           |[06_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/06_starter)|||
 |7 | SQL Fundamentals & Table Relations                             |[07_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/07_starter)|||
-|8 | Object-Relational Mapping                                      ||||
+|8 | Object-Relational Mapping                                      |[08_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/08_starter)|||
 |9 | Python CLI                                                     ||||
