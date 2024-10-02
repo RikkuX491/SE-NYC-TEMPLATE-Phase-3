@@ -28,6 +28,8 @@ Welcome to Python! In today's lecture, we will discuss the Python Fundamentals i
 
 ## Deliverables
 
+Write your solution code in `lib/app.py` (the `app.py` file which is in the `lib` directory / folder).
+
 1. Use the `print()` function to print the string `Hello Flatiron! Class is in session!`
 
 2. Create a function called `add()` that has two parameters. The value of the two parameters should be either integers or floats. The `add()` function should add the two numbers and return the sum of the two numbers. The `add()` function should raise a ValueError (using `raise ValueError`) if the value of either of the two parameters is not an integer or float value.
