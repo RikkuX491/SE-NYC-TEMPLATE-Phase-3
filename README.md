@@ -51,14 +51,14 @@ foods = [
 ]
 ```
 
-Make a List Comprehension that constructs a list from the names of the `foods`. Store the result of this List Comprehension into a variable called `food_names`.
+Make a List Comprehension that constructs a list containing the names of the foods from the `foods` variable. Store the result of this List Comprehension into a variable called `food_names`.
 
 ``` python
 food_names
 # => ["Flatburger", "French Fries", "Burrito"]
 ```
 
-6. Make a List Comprehension that constructs a list from the prices of the `foods`. Store the result of this List Comprehension into a variable called `food_prices`. Then, get the average price of the prices in the list stored in the `food_prices` variable and store that result in a variable called `average_price`.
+6. Make a List Comprehension that constructs a list of the prices of the foods from the `foods` variable. Store the result of this List Comprehension into a variable called `food_prices`. Then, get the average price of the prices in the list stored in the `food_prices` variable and store that result in a variable called `average_price`.
 
 ``` python
 food_prices
@@ -89,7 +89,7 @@ animals = [
 ]
 ```
 
-Make a List Comprehension that constructs a list such that each item in the list with be in the following format: `Fido is a Dog`. Store the result of this List Comprehension into a variable called `animal_descriptions`.
+Make a List Comprehension that constructs a list such that each item in the list with be in the following format: `{name} is a {animal_type}`, where `{name}` references the name of the animal, and `{animal_type}` references the animal_type of the animal. Store the result of this List Comprehension into a variable called `animal_descriptions`.
 
 ``` python
 animal_descriptions

@@ -15,15 +15,15 @@ def append_n_times(input_list, element, n):
 foods = [
     {
         "name": "Flatburger",
-        "price": 10.99
+        "price": 9.50
     },
     {
         "name": "French Fries",
-        "price": 1.99
+        "price": 1.25
     },
     {
         "name": "Burrito",
-        "price": 7.99
+        "price": 7.25
     }
 ]
 
