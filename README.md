@@ -38,15 +38,15 @@ Write your solution code in `lib/app.py` (the `app.py` file which is in the `lib
 foods = [
     {
         "name": "Flatburger",
-        "price": 10.99
+        "price": 9.50
     },
     {
         "name": "French Fries",
-        "price": 1.99
+        "price": 1.25
     },
     {
         "name": "Burrito",
-        "price": 7.99
+        "price": 7.25
     }
 ]
 ```
@@ -62,12 +62,12 @@ food_names
 
 ``` python
 food_prices
-# => 20.97
+# => [9.5, 1.25, 7.25]
 ```
 
 ``` python
 average_price
-# => 6.989999999999999
+# => 6.0
 ```
 
 7. In `app.py`, there is a list of dictionaries representing different `animals`.
