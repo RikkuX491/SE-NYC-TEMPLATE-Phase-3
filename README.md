@@ -70,7 +70,7 @@ average_price
 # => 6.0
 ```
 
-- Hint: You can use the `average()` function from Deliverable # 3 to help solve this deliverable
+- Hint: You can use the `average()` function from Deliverable # 3 to help solve this deliverable.
 
 7. In `app.py`, there is a list of dictionaries representing different `animals`.
 
