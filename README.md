@@ -11,6 +11,7 @@
 - Control Flow: Operators, Conditional Statements, Loops
 - Functions in Python
 - Using `raise Exception` to raise an Exception
+- Using `raise TypeError` to raise an Exception
 - Using `raise ValueError` to raise a ValueError
 - Handling errors with `try` and `except`
 
@@ -30,19 +31,22 @@ Welcome to Python! In today's lecture, we will discuss the Python Fundamentals i
 
 Write your solution code in `lib/app.py` (the `app.py` file which is in the `lib` directory / folder).
 
-1. Use the `print()` function to print the string `Hello Flatiron! Class is in session!`
+1. Use the `print()` function to print the string `"Hello Flatiron! Class is in session!"`
 
-2. Create a function called `add()` that has two parameters. The value of the two parameters should be either integers or floats. The `add()` function should add the two numbers and return the sum of the two numbers. The `add()` function should raise a ValueError (using `raise ValueError`) if the value of either of the two parameters is not an integer or float value.
+2. Create a function named `add()` that has two parameters named `num1` and `num2`. The value of the two parameters should be either integers or floats. The `add()` function should add the two numbers and return the sum of the two numbers. If the value of either of the two parameters (`num1` and `num2`) is not an integer or float value, the `add()` function should raise a `TypeError` (using `raise TypeError`)
 
-3. Create a function called `subtract()` that has two parameters. The value of the two parameters should be either integers or floats. The `subtract()` function should subtract the two numbers and return the difference of the two numbers. The `subtract()` function should raise a ValueError (using `raise ValueError`) if the value of either of the two parameters is not an integer or float value.
+3. Create a function named `subtract()` that has two parameters named `num1` and `num2`. The value of the two parameters should be either integers or floats. The `subtract()` function should subtract the 2nd number from the 1st number and return the difference of the two numbers. In other words, `num1 - num2`. Use `try` and `except` blocks to handle `TypeError` exceptions that may occur if `num1` and/or `num2` are not both integers or floats. Within the `except` block, use the `print()` function to print the string `"Error: num1 and num2 must both be integers or floats!"`
 
-4. Create a function called `multiply()` that has two parameters. The value of the two parameters should be either integers or floats. The `multiply()` function should multiply the two numbers and return the product of the two numbers. The `multiply()` function should raise a ValueError (using `raise ValueError`) if the value of either of the two parameters is not an integer or float value.
+4. Create a function named `multiply()` that has two parameters named `num1` and `num2`. The value of the two parameters should be either integers or floats. The `multiply()` function should multiply the two numbers and return the product of the two numbers. If the value of either of the two parameters (`num1` and `num2`) is not an integer or float value, the `add()` function should raise a `TypeError` (using `raise TypeError`)
 
-5. Create a function called `divide()` that has two parameters. The value of the two parameters should be either integers or floats, and the value of the second parameter cannot be equal to 0. The `divide()` function should divide the two numbers and return the quotient of the two numbers. The `divide()` function should raise a ValueError (using `raise ValueError`) if the value of either of the two parameters is not an integer or float value, or if the value of the second parameter is equal to 0.
+5. Create a function named `divide()` that has two parameters named `num1` and `num2`. The value of the two parameters should be either integers or floats, and the value of the second parameter cannot be equal to 0. The `divide()` function should divide the 2nd number from the 1st number and return the quotient of the two numbers. In other words, `num1 / num2`. Use `try` and `except` blocks to handle `TypeError` that may occur if `num1` and/or `num2` are not both integers or floats, and `ZeroDivisionError` exceptions that may occur if `num2` is equal to `0`. There should be two `except` blocks used, one to handle `TypeError`, and the other to handle `ZeroDivisionError`. Within the `except TypeError` block, use the `print()` function to print the string `"Error: num1 and num2 must both be integers or floats!"`. Within the `except ZeroDivisionError` block, use the `print()` function to print the string `"Error: num2 cannot be equal to 0!"`
 
-6. Create a function called `calculator()` that has three parameters. The value of the first parameter should be a string with the value of `+`, `-`, `*`, or `/` since it represents the operation to be performed on two numbers. The value of the second and third parameters should be either integers or floats. The `calculator()` function should perform the operation (`+`, `-`, `*`, or `/`) specified by the value of the first parameter on the second and third parameters (the numbers) and return the result. The `calculator()` function should raise a ValueError (using `raise ValueError`) if the first parameter has any other value that is not equal to `+`, `-`, `*`, or `/`.
+6. Create a function named `calculator()` that has three parameters named `operator`, `num1`, and `num2`. The value of the first parameter (`operator`) should be a string with the value of `+`, `-`, `*`, or `/` since it represents the operation to be performed on two numbers. The value of the second and third parameters (`num1` and `num2`) should be either integers or floats. The `calculator()` function should perform the operation (`+`, `-`, `*`, or `/`) specified by the value of the first parameter on the second and third parameters (the numbers) and return the result. The `calculator()` function should raise a `Exception` (using `raise Exception`) if the first parameter has any other value that is not equal to `+`, `-`, `*`, or `/`.
 
-7. Create a function called `print_greeting_loop()` that has one parameter which is a string. The `print_greeting_loop()` should print each character of the string separately.
+7. Create a function named `create_user()` that has one parameter named `username`. The value of the `username` parameter should be a string that is at least 2 characters in length. The `create_user()` should use the `print()` function to print a string in the format: `"User successfully created! Welcome {username}!"`, where `{username}` represents the value of the `username` parameter that should be incorporated into the string using string interpolation or string concatenation. The `create_user()` function should raise a `TypeError` (using `raise TypeError`) if the `username` parameter is not a string. The `create_user()` function should raise a `ValueError` (using `raise ValueError`) if the `username` parameter is a string that has a length that is less than 2 characters.
+
+8. Create a function named `print_greeting_loop()` that has one parameter named `greeting`. The value of the `greeting` parameter should be a string. The `print_greeting_loop()` should print each character of the string separately.
+
 - Hint 1: You can use the `print()` function to print a value.
 - Hint 2: You can use a `for` loop to iterate through a string's characters.
 
