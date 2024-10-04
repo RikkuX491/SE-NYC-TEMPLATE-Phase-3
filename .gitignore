@@ -1,5 +1,8 @@
 .DS_Store
-node_modules
-.pytest_cache
+
+# Virtual env metadata
 .venv
+
+# pytest cache
+.pytest_cache
 __pycache__
