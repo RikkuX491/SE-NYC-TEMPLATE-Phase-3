@@ -11,7 +11,7 @@
 |1 | Python Fundamentals                                            |[01_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/01_starter)||[01_solution](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/01_solution)|
 |2 | Python Data Structures                                         |[02_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/02_starter)||[02_solution](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/02_solution)|
 |3 | Object Oriented Programming in Python                          |[03_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/03_starter)||[03_solution](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/03_solution)|
-|4 | OOP Part 2: Class Methods & Class Variables                    |[04_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/04_starter)|||
+|4 | OOP Part 2: Class Methods & Class Variables                    |[04_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/04_starter)||[04_solution](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/04_solution)|
 |5 | Object Inheritance in Python & Configuring Python Applications |[05_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/05_starter)|||
 |6 | Object Relationships                                           |[06_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/06_starter)|||
 |7 | SQL Fundamentals & Table Relations                             |[07_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/07_starter)|||
