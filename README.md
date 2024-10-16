@@ -229,6 +229,8 @@ def get_all(cls):
 
 The `get_all()` method will retrieve all rows from the `hotels` table and create a Python object for each of the rows retrieved from the `hotels` table from the database. `instance_from_db()` is a helper class method that will create a `Hotel` instance from information from a row in the `hotels` table from the database.
 
+Try to write the code for the `instance_from_db()` and `get_all()` class methods for the `Customer` model (class) in `lib/models/customer.py` and the `instance_from_db()` and `get_all()` class methods for the `Review` model (class) in `lib/models/review.py`!
+
 2. In `lib/models/hotel.py`, add the following class method in the `Hotel` model (class):
 
 ```py
@@ -251,6 +253,8 @@ def find_by_id(cls, id):
 
 The `find_by_id()` method will retrieve the row from the `hotels` table with the specified `id` and create a Python object for the row retrieved from the `hotels` table from the database using the `instance_from_db()` helper class method if a matching row is found. If no row is found, `None` is returned.
 
+Try to write the code for the `find_by_id()` class method for the `Customer` model (class) in `lib/models/customer.py` and the `find_by_id()` class method for the `Review` model (class) in `lib/models/review.py`!
+
 ***
 
 ### UPDATE
@@ -270,6 +274,8 @@ def update(self):
 ```
 
 The `update()` method will update the row from the `hotels` table with the instance's `id`.
+
+Try to write the code for the `update()` instance method for the `Customer` model (class) in `lib/models/customer.py` and the `update()` instance method for the `Review` model (class) in `lib/models/review.py`!
 
 ***
 
@@ -295,3 +301,5 @@ def delete(self):
 ```
 
 The `delete()` method will delete the row from the `hotels` table with the instance's `id` and also remove it from the `all` class variable in the `Hotel` model (class).
+
+Try to write the code for the `delete()` instance method for the `Customer` model (class) in `lib/models/customer.py` and the `delete()` instance method for the `Review` model (class) in `lib/models/review.py`!
