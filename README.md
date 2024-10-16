@@ -63,11 +63,14 @@ We can access the constants within those files by adding the `import` statement 
 @classmethod
 def create_table(cls):
     """ Create a new table to persist the attributes of Hotel instances """
+
     sql = """
         CREATE TABLE IF NOT EXISTS hotels (
-        id INTEGER PRIMARY KEY,
-        name TEXT)
+            id INTEGER PRIMARY KEY,
+            name TEXT
+        )
     """
+
     CURSOR.execute(sql)
 ```
 
@@ -79,12 +82,15 @@ def create_table(cls):
 @classmethod
 def create_table(cls):
     """ Create a new table to persist the attributes of Customer instances """
+
     sql = """
         CREATE TABLE IF NOT EXISTS customers (
-        id INTEGER PRIMARY KEY,
-        first_name TEXT,
-        last_name TEXT)
+            id INTEGER PRIMARY KEY,
+            first_name TEXT,
+            last_name TEXT
+        )
     """
+
     CURSOR.execute(sql)
 ```
 
@@ -96,14 +102,17 @@ def create_table(cls):
 @classmethod
 def create_table(cls):
     """ Create a new table to persist the attributes of Review instances """
+
     sql = """
         CREATE TABLE IF NOT EXISTS reviews (
-        id INTEGER PRIMARY KEY,
-        rating INTEGER,
-        text TEXT,
-        hotel_id INTEGER,
-        customer_id INTEGER)
+            id INTEGER PRIMARY KEY,
+            rating INTEGER,
+            text TEXT,
+            hotel_id INTEGER,
+            customer_id INTEGER
+        )
     """
+
     CURSOR.execute(sql)
 ```
 
@@ -119,9 +128,11 @@ def create_table(cls):
 @classmethod
 def drop_table(cls):
     """ Drop the table that persists Hotel instances """
+
     sql = """
-        DROP TABLE IF EXISTS hotels;
+        DROP TABLE IF EXISTS hotels
     """
+
     CURSOR.execute(sql)
 ```
 
@@ -133,9 +144,11 @@ def drop_table(cls):
 @classmethod
 def drop_table(cls):
     """ Drop the table that persists Customer instances """
+
     sql = """
-        DROP TABLE IF EXISTS customers;
+        DROP TABLE IF EXISTS customers
     """
+
     CURSOR.execute(sql)
 ```
 
@@ -147,9 +160,11 @@ def drop_table(cls):
 @classmethod
 def drop_table(cls):
     """ Drop the table that persists Review instances """
+
     sql = """
-        DROP TABLE IF EXISTS reviews;
+        DROP TABLE IF EXISTS reviews
     """
+
     CURSOR.execute(sql)
 ```
 
@@ -166,6 +181,7 @@ def save(self):
     """ Insert a new row with the name value of the current Hotel instance.
     Update object id attribute using the primary key value of new row.
     """
+
     sql = """
         INSERT INTO hotels (name)
         VALUES (?)
@@ -189,6 +205,7 @@ Try to write the code for the `save()` instance method for the `Customer` model 
 @classmethod
 def create(cls, name):
     """ Initialize a new Hotel instance and save the object to the database """
+
     hotel = cls(name)
     hotel.save()
     return hotel
@@ -216,6 +233,7 @@ def instance_from_db(cls, row):
 @classmethod
 def get_all(cls):
     """Return a list containing a Hotel object per row in the table"""
+
     sql = """
         SELECT *
         FROM hotels
@@ -237,6 +255,7 @@ Try to write the code for the `instance_from_db()` and `get_all()` class methods
 @classmethod
 def find_by_id(cls, id):
     """Return a Hotel object corresponding to the table row matching the specified primary key"""
+
     sql = """
         SELECT *
         FROM hotels
@@ -264,11 +283,13 @@ In `lib/models/hotel.py`, add the following instance method in the `Hotel` model
 ```py
 def update(self):
     """Update the table row corresponding to the current Hotel instance."""
+
     sql = """
         UPDATE hotels
         SET name = ?
         WHERE id = ?
     """
+
     CURSOR.execute(sql, (self.name, self.id))
     CONN.commit()
 ```
@@ -287,7 +308,6 @@ In `lib/models/hotel.py`, add the following instance method in the `Hotel` model
 def delete(self):
     """Delete the table row corresponding to the current Hotel instance and remove it from the all class variable"""
 
-
     sql = """
         DELETE FROM hotels
         WHERE id = ?
@@ -303,3 +323,90 @@ def delete(self):
 The `delete()` method will delete the row from the `hotels` table with the instance's `id` and also remove it from the `all` class variable in the `Hotel` model (class).
 
 Try to write the code for the `delete()` instance method for the `Customer` model (class) in `lib/models/customer.py` and the `delete()` instance method for the `Review` model (class) in `lib/models/review.py`!
+
+***
+
+### Hotel has many Reviews (1-to-Many Relationship)
+
+In `lib/models/hotel.py`, add the following instance method in the `Hotel` model (class):
+
+```py
+def reviews(self):
+    """Return list of reviews associated with current hotel"""
+
+    from review import Review
+
+    sql = """
+        SELECT * FROM reviews
+        WHERE hotel_id = ?
+    """
+
+    CURSOR.execute(sql, (self.id,),)
+    
+    rows = CURSOR.fetchall()
+    return [Review.instance_from_db(row) for row in rows]
+```
+
+The `reviews()` method will return a list of Review instances associated with a Hotel instance.
+
+Try to write the code for the `reviews()` instance method for the `Customer` model (class) in `lib/models/customer.py`!
+
+### Review belongs to Hotel
+
+In `lib/models/review.py`, add the following instance method in the `Review` model (class):
+
+```py
+def hotel(self):
+    """Return hotel instance associated with current review"""
+
+    from hotel import Hotel
+
+    sql = """
+        SELECT hotels.id, hotels.name FROM hotels
+        INNER JOIN reviews
+        ON hotels.id = reviews.hotel_id
+        WHERE reviews.hotel_id = ?
+        GROUP BY hotels.id
+    """
+
+    row = CURSOR.execute(sql, (self.hotel_id,),).fetchone()
+
+    if row:
+        return Hotel.instance_from_db(row)
+    else:
+        return None
+```
+
+The `hotel()` method will return a Hotel instance that is associated with a Review instance if a matching row is found. If no row is found, `None` is returned.
+
+Try to write the code for the `customer()` instance method for the `Review` model (class)! The `customer()` instance method should return a Customer instance that is associated with a Review instance if a matching row is found. If no row is found, `None` is returned, similar to the `hotel()` instance method.
+
+### Hotel has many Customers (Many-to-Many Relationship)
+
+In `lib/models/hotel.py`, add the following instance method in the `Hotel` model (class):
+
+```py
+def customers(self):
+    """Return list of customers associated with current hotel"""
+
+    from customer import Customer
+
+    sql = """
+        SELECT customers.id, customers.first_name, customers.last_name FROM customers
+        INNER JOIN reviews
+        ON customers.id = reviews.customer_id
+        INNER JOIN hotels
+        ON hotels.id = reviews.hotel_id
+        WHERE hotels.id = ?
+        GROUP BY customers.id
+    """
+
+    CURSOR.execute(sql, (self.id,),)
+    
+    rows = CURSOR.fetchall()
+    return [Customer.instance_from_db(row) for row in rows]
+```
+
+The `customers()` method will return a list of Customer instances associated with a Hotel instance.
+
+Try to write the code for the `hotels()` instance method for the `Customer` model (class) in `lib/models/customer.py`!
