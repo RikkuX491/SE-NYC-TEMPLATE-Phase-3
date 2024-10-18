@@ -55,10 +55,7 @@ class Review:
         else:
             raise ValueError("Customer ID must be an integer!")
         
-    def hotel(self):
-        pass
-
-    def customer(self):
-        pass
+    def __repr__(self):
+        return f"<Review # {self.id}: Rating = {self.rating}, Text = {self.text}, Hotel ID = {self.hotel_id}, Customer ID = {self.customer_id}>"
 
     # add new ORM methods after existing methods
