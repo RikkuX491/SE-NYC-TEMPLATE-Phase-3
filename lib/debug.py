@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import ipdb;
+import ipdb
 
 from models.__init__ import CONN, CURSOR
 from models.hotel import Hotel
