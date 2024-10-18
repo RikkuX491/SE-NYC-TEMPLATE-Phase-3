@@ -19,10 +19,7 @@ class Hotel:
         else:
             raise ValueError("Name must be a string between 5 and 20 characters long!")
 
-    def reviews(self):
-        pass
-    
-    def customers(self):
-        pass
+    def __repr__(self):
+        return f"<Hotel # {self.id}: Name = {self.name}>"
     
     # add new ORM methods after existing methods
