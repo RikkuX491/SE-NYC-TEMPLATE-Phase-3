@@ -31,10 +31,7 @@ class Customer:
         else:
             raise ValueError("Last Name must be a string at least 1 character long!")
 
-    def reviews(self):
-        pass
-    
-    def hotels(self):
-        pass
+    def __repr__(self):
+        return f"<Customer # {self.id}: First Name = {self.first_name}, Last Name = {self.last_name}>"
     
     # add new ORM methods after existing methods
