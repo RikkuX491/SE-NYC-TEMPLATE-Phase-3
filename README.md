@@ -17,3 +17,4 @@
 |7 | SQL Fundamentals & Table Relations                             |[07_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/07_starter)|||
 |8 | Object-Relational Mapping                                      |[08_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/08_starter)|||
 |9 | Python CLI                                                     |[09_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/09_starter)|||
+|10 | Data Structures and Algorithms                                |[10_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-3/tree/10_starter)|||
