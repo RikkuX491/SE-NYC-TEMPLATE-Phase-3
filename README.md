@@ -1,20 +1,11 @@
-# Lecture # 9 - Python CLI
+# Lecture # 10 - Data Structures and Algorithms
 
 ## Lecture Topics
 
-- Building a CLI in Python
-- Using the `break` statement to break from a loop
-- Using the `quit()` function to exit the Python program
-- Seeding the database
-
-## Introduction
-
-In today's lecture, we will discuss about building a CLI in Python.
-
-## Setup
-
-1. Make sure that your current working directory (folder) contains a `Pipfile`, then run `pipenv install` in your terminal to install the packages in the `Pipfile` into the pipenv virtual environment.
-
-2. Now that your `pipenv` virtual environment is ready to use, enter `pipenv shell` to enter the virtual environment.
-
-3. We will be running `python lib/cli.py` to run the code in our `cli.py` file.
+- Identify the use cases for a **Singly Linked List**
+- Demonstrate common methods for a Singly Linked List
+- Differentiate between a Singly Linked List and a list
+- Identify the use cases for a **doubly linked list**
+- Demonstrate common methods for a doubly linked list
+- Differentiate between a doubly linked list and a singly linked list
+- Become familiar with three types of tree data structures: **Tree**, **Binary Tree** and **Binary Search Tree**
