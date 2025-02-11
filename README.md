@@ -9,3 +9,7 @@
 - Demonstrate common methods for a doubly linked list
 - Differentiate between a doubly linked list and a singly linked list
 - Become familiar with three types of tree data structures: **Tree**, **Binary Tree** and **Binary Search Tree**
+
+## Introduction
+
+In today's lecture, we will discuss about Data Structures and Algorithms in Python.
