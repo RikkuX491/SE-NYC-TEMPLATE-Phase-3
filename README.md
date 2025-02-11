@@ -13,3 +13,13 @@
 ## Introduction
 
 In today's lecture, we will discuss about Data Structures and Algorithms in Python.
+
+## Setup
+
+1. Make sure that your current working directory (folder) contains a `Pipfile`, then run `pipenv install` in your terminal to install the packages in the `Pipfile` into the pipenv virtual environment.
+
+2. Now that your `pipenv` virtual environment is ready to use, enter `pipenv shell` to enter the virtual environment.
+
+3. Run `python lib/seed.py` to execute the code in the `seed.py` file to seed the database.
+
+4. Run `python lib/cli.py` to execute the code in our `cli.py` file.
