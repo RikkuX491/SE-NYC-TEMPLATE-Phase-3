@@ -17,4 +17,6 @@ In today's lecture, we will discuss about building a CLI in Python.
 
 2. Now that your `pipenv` virtual environment is ready to use, enter `pipenv shell` to enter the virtual environment.
 
-3. We will be running `python lib/cli.py` to run the code in our `cli.py` file.
+3. Run `python lib/seed.py` to execute the code in the `seed.py` file to seed the database.
+
+4. Run `python lib/cli.py` to execute the code in our `cli.py` file.
