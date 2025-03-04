@@ -17,6 +17,21 @@ class SinglyLinkedList:
         # We also need to make sure to keep track of the new tail.
         self.tail = node
 
+    def delete_tail(self):
+        # There is nothing to delete if the linked list is empty.
+        if self.head == None:
+            return
+        
+        # Otherwise, traverse the entire list to find the second-to-last node (prev).
+        curr = self.head
+        prev = None
+        while curr.next_node:
+            prev = curr
+            curr = curr.next_node
+        
+        # remove the last node by removing the link between the second-to-last node and the tail.
+        prev.next_node = None
+
 # Since our SinglyLinkedList class is going to contain a series of nodes linked together, we'll create a Node class.
 class Node:
     def __init__(self, data, next_node=None):
