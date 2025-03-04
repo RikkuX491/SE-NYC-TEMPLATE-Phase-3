@@ -9,13 +9,13 @@ class SinglyLinkedList:
         if self.head == None:
             self.head = node
             self.tail = node
-            return
 
-        # Otherwise, add the node to the end of the linked list.
-        self.tail.next_node = node
+        else:
+            # Otherwise, add the node to the end of the linked list.
+            self.tail.next_node = node
 
-        # We also need to make sure to keep track of the new tail.
-        self.tail = node
+            # We also need to make sure to keep track of the new tail.
+            self.tail = node
 
     def delete_tail(self):
         # There is nothing to delete if the linked list is empty.

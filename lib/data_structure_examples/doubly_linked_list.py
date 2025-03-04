@@ -10,14 +10,27 @@ class DoublyLinkedList:
         if self.head == None:
             self.head = node
             self.tail = node
-            return
         
-        # Otherwise, add the node to the end of the linked list.
-        node.prev_node = self.tail
-        self.tail.next_node = node
+        else:
+            # Otherwise, add the node to the end of the linked list.
+            node.prev_node = self.tail
+            self.tail.next_node = node
 
-        # We also need to make sure to keep track of the new tail.
-        self.tail = node
+            # We also need to make sure to keep track of the new tail.
+            self.tail = node
+
+    def delete_tail(self):
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+
+        else:
+            # access the second-to-last node (self.tail.prev_node)
+            prev = self.tail.prev_node
+
+            # update the tail and next_node pointers
+            prev.next_node = None
+            self.tail = prev
 
 # Doubly linked lists have pointers to the next node as well as the previous node.
 class Node:
