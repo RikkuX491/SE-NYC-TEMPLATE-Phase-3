@@ -13,10 +13,12 @@ class SinglyLinkedList:
         current_node = self.head
         while current_node.next_node:
             current_node = current_node.next_node
+            
+        # and add the node to the end
         current_node.next_node = node
 
 # Since our SinglyLinkedList class is going to contain a series of nodes linked together, we'll create a Node class.
 class Node:
-    def __init__(self, data, next_node = None):
+    def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
