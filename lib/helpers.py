@@ -1,6 +1,5 @@
-from models.hotel import Hotel
-from models.customer import Customer
-from models.review import Review
+from models.page import Page
+from models.room import Room
 
 def exit_program():
     print("Goodbye!")

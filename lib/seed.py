@@ -1,33 +1,27 @@
 #!/usr/bin/env python3
 
 from models.__init__ import CONN, CURSOR
-from models.hotel import Hotel
-from models.customer import Customer
-from models.review import Review
+from models.page import Page
+from models.room import Room
 
 def seed_database():
-    Review.drop_table()
-    Hotel.drop_table()
-    Customer.drop_table()
+    Page.drop_table()
+    Room.drop_table()
 
-    Hotel.create_table()
-    Customer.create_table()
-    Review.create_table()
+    Page.create_table()
+    Room.create_table()
 
     # Create seed data
-    Hotel.create("Marriott")
-    Hotel.create("Waikiki Resort")
-    Hotel.create("Bahamas Resort")
+    Page.create("Once upon a time, I woke up bright and early in the morning. I was so sleepy, so I decided to make a cup of Java coffee. But then I realized that I forgot how to make coffee. Luckily for me, I wrote a Script that reminds me of how to make Java coffee. Get it? Java Script?")
+    Page.create("How did you React to my programming joke?")
+    Page.create("I just remembered that it was time to feed my Python.")
+    Page.create("Before leaving from home, I decided to store the rest of my coffee in a Flask. Off we go to the Flatiron School Software Engineering bootcamp!")
 
-    Customer.create("Alice", "Baker")
-    Customer.create("Bob", "Carris")
-    Customer.create("Cynthia", "Dawson")
-    Customer.create("David", "Evans")
-
-    Review.create(5, "Best hotel ever!", 1, 1)
-    Review.create(4, "Amazing!", 1, 2)
-    Review.create(4, "Great!", 2, 1)
-    Review.create(3, "Not as good as the first time I was there.", 1, 1)
+    Room.create("Alan Turing Classroom", "Welcome to Alan Turing Classroom - where your journey begins and ends. Exciting events including instructor kickoffs, project presentations, and Switch 'N Brew takes places in this action-packed room. This is also one of rooms you'll find instructors giving lectures in.")
+    Room.create("Collins Classroom", "Welcome to Collins Classroom! Enjoy the lovely views offered outside the windows. It's yet another one of our rooms you'll find instructors giving lectures in.")
+    Room.create("Kay Classroom", "Welcome to Kay Classroom - a pretty quiet and chill classroom near the phone booths, lockers, and instructor tables.")
+    Room.create("Katherine Johnson Workroom", "Welcome to Katherine Johnson Workroom - the quiet space for students to focus on getting those assignments done, or also to relax away from all of the noise.")
+    Room.create("Teacher's Lounge", "401 Unauthorized")
 
 seed_database()
-print("🌱 Hotels, Customers, and Reviews successfully seeded! 🌱")
+print("🌱 Pages and Rooms successfully seeded! 🌱")

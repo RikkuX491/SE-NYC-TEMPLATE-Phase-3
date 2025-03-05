@@ -1,4 +1,4 @@
 import sqlite3
 
-CONN = sqlite3.connect('hotel_reviews.db')
+CONN = sqlite3.connect('data_structures.db')
 CURSOR = CONN.cursor()
